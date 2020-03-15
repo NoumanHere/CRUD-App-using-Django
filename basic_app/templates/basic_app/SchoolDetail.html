@@ -1,0 +1,17 @@
+{% extends 'basic_app/basic_app-base.html' %}
+{% block body_block %}
+
+<div class="jumbotrom">
+  <h1>Welcome to the details of Schools</h1>
+  <h2>Here are the details of Schools: </h2>
+  <p>Name: {{Skools_Detail.Name}}</p>
+  <p>Principal: {{Skools_Detail.Principal}}</p>
+  <p>Location: {{Skools_Detail.Location}}</p>
+  <h3>Students: </h3>
+
+  {% for S in Skools_Detail.SMI.all  %}
+    <p>{{S.Name}} who is {{S.Age}} years Old! </p>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'basaefortags.html' %}
+<h1>Here is the list of the Posts</h1>
+{% for p in posts %}
+<h1>{{ p.name p.slug }}</h1>
+{% endfor %}
